@@ -7,10 +7,10 @@ Connect to a [Prism Server](https://github.com/socketstream/prism) from the brow
 
 ```js
 var prismClient = require('prism-client');
-var rtt = require('rtt-engineio')();
+var rtt = require('rtt-engine.io')();
 
 var transport = rtt.client({port: 3001, host: 'localhost'});
-var app = prismClient();
+var app = prismClient({transport: transport});
 
 app.connect(function(err, info){
 
